@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="chart.js"></script>
+    <style>
+      body {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"
+      }
+      a {
+        text-decoration: none;
+      }
+      header {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      header h1 {
+        text-align: center;
+      }
+      .description {
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Cocina Descriptive Metadata</h1>
+    </header>
+    <div class="container">
+
+      <p class="description">
+      The following <a href="https://datavizcatalogue.com/methods/sunburst_diagram.html">sunburst diagram</a> is an attempt to visualize the shape of <a href="https://github.com/sul-dlss/cocina-models">Cocina</a> descriptive metadata for objects in the Stanford Digital Repository. Cocina is expressed using JSON, and each wedge represents a portion of a JSON path for used in assertion, and is sized based on how many assertions it is part of. The JSON path radiates from the center out, and wedges can be clicked on to reveal additional sub paths. The data was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> which generated a <a href="data.csv">CSV file</a>.
+      </p>
+
+
+      </p>
+      <div class="description">
+      </div>
+      <div id="chart"></div>
+    </section>
+  </body>
+</html>
