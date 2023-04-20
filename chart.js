@@ -15,6 +15,9 @@ async function main() {
 
   const dataCatalog = await getData('data-catalog.csv');
   Plotly.newPlot('chart-catalog', dataCatalog, layout, config);
+
+  const dataNoCatalog = await getData('data-no-catalog.csv');
+  Plotly.newPlot('chart-no-catalog', dataNoCatalog, layout, config);
 }
 
 async function getData(csvUrl) {

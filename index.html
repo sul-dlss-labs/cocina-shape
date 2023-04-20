@@ -30,6 +30,7 @@
     <header>
       <h1>The Shape of Cocina Descriptive Metadata</h1>
     </header>
+
     <section>
       <div class="description">
 	<p>The following <a href="https://datavizcatalogue.com/methods/sunburst_diagram.html">sunburst diagrams</a> attempt to visualize the shape of <a href="https://github.com/sul-dlss/cocina-models">Cocina</a> descriptive metadata for objects in the Stanford Digital Repository. Cocina is expressed using JSON, and each wedge (or node) in the diagram represents a portion of a JSON path used in assertion, and is sized based on how many assertions it is part of.</p>
@@ -38,11 +39,21 @@
       </div>
       <div id="chart-all"></div>
     </section>
+
     <section>
       <div class="description">
-        <p>The similar visualization below only includes descriptions for objects that link to the catalog: records which contain one or more <em>catalogLinks</em> in their Cocina <em>identification</em> metadata. Ostensibly these are resource descriptions that were derived from MARC. </p>
-	<p>The data for the chart below was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog_only: true</em> option which generated <a href="data-catalog.csv">this CSV file</a>. </p>
+        <p>The next visualization only includes descriptions for objects that link to the catalog: records which contain one or more <em>catalogLinks</em> in their Cocina <em>identification</em> metadata. Ostensibly these are resource descriptions that were derived from MARC. </p>
+	<p>The data for the chart was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'only'</em> option which generated <a href="data-catalog.csv">this CSV file</a>. </p>
       </div>
       <div id="chart-catalog"></div>
+    </section>
+
+    <section>
+      <div class="description">
+        <p>This last visualization only includes descriptions for objects that do not link to the catalog: records which contain no <em>catalogLinks</em> in their Cocina <em>identification</em> metadata. The data was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'none'</em> option which generated <a href="data-no-catalog.csv">this CSV file</a>. </p>
+      </div>
+      <div id="chart-no-catalog"></div>
+    </section>
+
   </body>
 </html>
