@@ -31,29 +31,35 @@
       <h1>The Shape of Cocina Descriptive Metadata</h1>
     </header>
 
+    <p>The following <a href="https://datavizcatalogue.com/methods/sunburst_diagram.html">sunburst diagrams</a> attempt to visualize the shape of <a href="https://github.com/sul-dlss/cocina-models">Cocina</a> descriptive metadata for objects in the Stanford Digital Repository. Cocina is expressed using JSON, and each wedge (or node) in a diagram represents a portion of a JSON path used in cocina objects, and is sized based on how many occurrences it is part of.</p>
+    <p>The JSON path radiates from the center out, and wedges can be clicked on to zoom in on additional parts of a path. After zooming in, clicking on the central wedge will cause the view to pop back out one-level. The hover text indicates the name of JSON path property (useful when the wedge is tiny) as well as a count of the number of properties that the path is a part of (essentially a sum of all the leaf nodes it contains).</p>
+    <p>Each occurence of a cocina property value is counted, so if an object's descriptive metadata has 5 subject values, they will add 5 to the total count of subjects.</p>
+
     <section>
+      <h3>All Occurrences of All Properties for All SDR Cocina Objects</h3>
       <div class="description">
-	<p>The following <a href="https://datavizcatalogue.com/methods/sunburst_diagram.html">sunburst diagrams</a> attempt to visualize the shape of <a href="https://github.com/sul-dlss/cocina-models">Cocina</a> descriptive metadata for objects in the Stanford Digital Repository. Cocina is expressed using JSON, and each wedge (or node) in the diagram represents a portion of a JSON path used in assertion, and is sized based on how many assertions it is part of.</p>
-	<p>The JSON path radiates from the center out, and wedges can be clicked on to zoom in on additional parts of a path. After zooming in, clicking on the central wedge will cause the view to pop back out one-level. The hover text indicates the name of JSON path property (useful when the wedge is tiny) as well as a count of the number of assertions that the path is a part of (essentially a sum of all the leaf nodes it contains).</p>
-	<p>The data for the chart below was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> which generated <a href="data-all.csv">this CSV file</a>. </p>
+        <p>The data for the chart below was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> which generated <a href="data-all.csv">this CSV file</a>.</p>
       </div>
       <div id="chart-all"></div>
     </section>
 
     <section>
+      <h3>All Occurrences of All Properties for SDR Cocina Objects That Link to the ILS Catalog</h3>
       <div class="description">
-        <p>The next visualization only includes descriptions for objects that link to the catalog: records which contain one or more <em>catalogLinks</em> in their Cocina <em>identification</em> metadata. Ostensibly these are resource descriptions that were derived from MARC. </p>
-	<p>The data for the chart was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'only'</em> option which generated <a href="data-catalog.csv">this CSV file</a>. </p>
+        <p>This visualization only includes descriptions for <em>objects that link to the ILS catalog</em>: records which contain one or more <em>catalogLinks</em> in their Cocina <em>identification</em> metadata.</p>
+        <p>Ostensibly the descriptive metadata was derived from MARC.</p>
+        <p>The data for the chart was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'only' option</em>, which resulted in <a href="data-catalog.csv">this CSV file</a>.</p>
       </div>
       <div id="chart-catalog"></div>
     </section>
 
     <section>
+      <h3>All Occurrences of All Properties for SDR Cocina Objects That Do NOT Link to the ILS Catalog</h3>
       <div class="description">
-        <p>This last visualization only includes descriptions for objects that do not link to the catalog: records which contain no <em>catalogLinks</em> in their Cocina <em>identification</em> metadata. The data was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'none'</em> option which generated <a href="data-no-catalog.csv">this CSV file</a>. </p>
+        <p>This visualization only includes descriptions for cocina objects that do NOT contain catalogLinks in their Cocina <em>identification</em> metadata. </p>
+        <p>The data was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'none'</em> option, which resulted in <a href="data-no-catalog.csv">this CSV file</a>.</p>
       </div>
       <div id="chart-no-catalog"></div>
     </section>
-
   </body>
 </html>
