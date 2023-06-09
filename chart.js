@@ -53,8 +53,8 @@ async function getData(csvUrl) {
 }
 
 /**
- * getNodes does the hard work of converting the JSON paths with 
- * terminal string or number values into a list of "nodes" 
+ * getNodes does the hard work of converting the JSON paths with
+ * terminal string or number values into a list of "nodes"
  * which represent the hierarchy of parts of those JSON paths.
  * Each node contains an id, a label, a count, and the id of its parent.
  */
@@ -65,9 +65,9 @@ function getNodes(csv) {
 
     // each parent's count gets incremented by the count of its children
     // so we steph through each element in the JSON path and generate
-    // objects for larger and larger JSON paths that are included in the 
+    // objects for larger and larger JSON paths that are included in the
     // full JSON path, starting at the root.
-    
+
     const idParts = row.path.split(".");
     for (let i = 1; i <= idParts.length; i += 1) {
       const count = Number.parseInt(row.count);
