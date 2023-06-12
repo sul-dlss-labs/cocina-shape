@@ -33,7 +33,7 @@
 
     <p>The following <a href="https://datavizcatalogue.com/methods/sunburst_diagram.html">sunburst diagrams</a> attempt to visualize the shape of <a href="https://github.com/sul-dlss/cocina-models">Cocina</a> descriptive metadata for objects in the Stanford Digital Repository. Cocina is expressed using JSON, and each wedge (or node) in a diagram represents a portion of a JSON path used in cocina objects, and is sized based on how many occurrences it is part of.</p>
     <p>The JSON path radiates from the center out, and wedges can be clicked on to zoom in on additional parts of a path. After zooming in, clicking on the central wedge will cause the view to pop back out one-level. The hover text indicates the name of JSON path property (useful when the wedge is tiny) as well as a count of the number of properties that the path is a part of (essentially a sum of all the leaf nodes it contains).</p>
-    <p>Each occurence of a cocina property value is counted, so if an object's descriptive metadata has 5 subject values, they will add 5 to the total count of subjects.</p>
+    <p>Each non-empty occurence of a cocina property value is counted, so if an object's descriptive metadata has 5 distinct subject values, they will add 5 to the total count of subjects.</p>
 
     <section>
       <h3>All Occurrences of All Properties for All SDR Cocina Objects</h3>
