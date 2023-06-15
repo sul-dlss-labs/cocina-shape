@@ -15,14 +15,16 @@
         margin-left: auto;
         margin-right: auto;
       }
-      header h1 {
+      h1, h2 {
         text-align: center;
       }
-      .description {
-        max-width: 750px;
+      section {
+        margin-top: 50px;
+      }
+      p {
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 30px;
       }
     </style>
   </head>
@@ -36,29 +38,20 @@
     <p>Each non-empty occurence of a cocina property value is counted, so if an object's descriptive metadata has 5 distinct subject values, they will add 5 to the total count of subjects.</p>
 
     <section>
-      <h3>All Occurrences of All Properties for All SDR Cocina Objects</h3>
-      <div class="description">
-        <p>The data for the chart below was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> which generated <a href="data-all.csv">this CSV file</a>.</p>
-      </div>
+      <h2>All Occurrences of All Properties for All SDR Cocina Objects</h2>
+      <p>The data for the chart below was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> which generated <a href="data-all.csv">this CSV file</a>.</p>
       <div id="chart-all"></div>
     </section>
 
     <section>
-      <h3>All Occurrences of All Properties for SDR Cocina Objects That Link to the ILS Catalog</h3>
-      <div class="description">
-        <p>This visualization only includes descriptions for <em>objects that link to the ILS catalog</em>: records which contain one or more <em>catalogLinks</em> in their Cocina <em>identification</em> metadata.</p>
-        <p>Ostensibly the descriptive metadata was derived from MARC.</p>
-        <p>The data for the chart was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'only' option</em>, which resulted in <a href="data-catalog.csv">this CSV file</a>.</p>
-      </div>
+      <h2>All Occurrences of All Properties for SDR Cocina Objects That Link to the ILS Catalog</h2>
+      <p>This visualization only includes descriptions for <em>objects that link to the ILS catalog</em>: records which contain one or more <em>catalogLinks</em> in their Cocina <em>identification</em> metadata. Ostensibly the descriptive metadata was derived from MARC. The data for the chart was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'only' option</em>, which resulted in <a href="data-catalog.csv">this CSV file</a>.</p>
       <div id="chart-catalog"></div>
     </section>
 
     <section>
-      <h3>All Occurrences of All Properties for SDR Cocina Objects That Do NOT Link to the ILS Catalog</h3>
-      <div class="description">
-        <p>This visualization only includes descriptions for cocina objects that do NOT contain catalogLinks in their Cocina <em>identification</em> metadata. </p>
-        <p>The data was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'none'</em> option, which resulted in <a href="data-no-catalog.csv">this CSV file</a>.</p>
-      </div>
+      <h2>All Occurrences of All Properties for SDR Cocina Objects That Do NOT Link to the ILS Catalog</h2>
+      <p>This visualization only includes descriptions for cocina objects that do NOT contain catalogLinks in their Cocina <em>identification</em> metadata. The data was generated using the <a href="https://github.com/sul-dlss/dor-services-app/blob/main/app/reports/descriptive_shape.rb">descriptive shape report</a> with the <em>catalog: 'none'</em> option, which resulted in <a href="data-no-catalog.csv">this CSV file</a>.</p>
       <div id="chart-no-catalog"></div>
     </section>
   </body>
